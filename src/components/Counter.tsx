@@ -25,6 +25,7 @@ export const Counter = (props: CounterType) => {
 
     return (
         <div className={s.counter}>
+
             <div className={classNameWindow}>
                 {'' + count + '/' + countMax}
             </div>
@@ -33,14 +34,11 @@ export const Counter = (props: CounterType) => {
 
                 <Button name={'inc'}
                         callback={onIncrement}
-                        disabled={count === countMax}
-                />
+                        disabled={count === countMax}/>
+
                 <Button name={'reset'}
                         callback={onReset}
-                        disabled={!count}
-
-
-                />
+                        disabled={!count}/>
 
             </div>
         </div>
