@@ -8,12 +8,12 @@ export type CounterType = {
 
 export const Counter = (props: CounterType) => {
 
-    let [count, setCount] = useState<number>(0)
-    let {countMax} = props
+    const [count, setCount] = useState<number>(0)
+    const {countMax} = props
 
     const onIncrement = () => {
         if (count < countMax) {
-            setCount(++count)
+            setCount(count + 1)           ///++count - так не стоит делать - нужно    count + 1 - потому что меняется стейт
         }
     }
 
